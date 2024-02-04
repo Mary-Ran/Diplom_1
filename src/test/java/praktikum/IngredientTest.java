@@ -8,6 +8,7 @@ public class IngredientTest {
     public String name;
     public float price;
     Ingredient ingredient = new Ingredient(IngredientType.SAUCE, name, price);
+
     @Test
     public void getPrice() {
         Assert.assertEquals(price, ingredient.getPrice(), 0);

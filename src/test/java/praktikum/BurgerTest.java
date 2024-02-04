@@ -78,10 +78,10 @@ public class BurgerTest {
         Mockito.when(burger.getPrice()).thenReturn(153.3f);
         String expectedReceipt =
                 String.format("(==== Булочка ====)%n") +
-                        String.format("= sauce Сырный =%n") +
-                        String.format("= filling Котлета =%n") +
-                        String.format("(==== Булочка ====)%n") +
-                        String.format("%nPrice: %f%n", 153.3f);
+                String.format("= sauce Сырный =%n") +
+                String.format("= filling Котлета =%n") +
+                String.format("(==== Булочка ====)%n") +
+                String.format("%nPrice: %f%n", 153.3f);
         Assert.assertEquals(expectedReceipt, burger.getReceipt());
     }
 }
