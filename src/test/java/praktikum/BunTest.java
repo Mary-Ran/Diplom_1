@@ -8,8 +8,9 @@ import org.junit.runners.Parameterized;
 @RunWith(Parameterized.class)
 public class BunTest {
 
-    public String name;
-    public float price;
+    private String name;
+    private float price;
+    private final float DELTA = 0;
     Bun bun;
 
     public BunTest(String name, float price) {
@@ -37,6 +38,6 @@ public class BunTest {
     @Test
     public void getPrice() {
         bun = new Bun(name, price);
-        Assert.assertEquals(price, bun.getPrice(),0);
+        Assert.assertEquals(price, bun.getPrice(),DELTA);
     }
 }

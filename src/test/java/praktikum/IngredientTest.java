@@ -5,13 +5,14 @@ import org.junit.Test;
 
 public class IngredientTest {
 
-    public String name;
-    public float price;
+    private String name;
+    private float price;
+    private final float DELTA = 0;
     Ingredient ingredient = new Ingredient(IngredientType.SAUCE, name, price);
 
     @Test
     public void getPrice() {
-        Assert.assertEquals(price, ingredient.getPrice(), 0);
+        Assert.assertEquals(price, ingredient.getPrice(), DELTA);
     }
 
     @Test

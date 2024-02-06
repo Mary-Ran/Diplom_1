@@ -13,6 +13,7 @@ import static org.mockito.Mockito.mock;
 public class BurgerTest {
     private Burger burger;
     private List<Ingredient> ingredients;
+    private final float DELTA = 0;
     Ingredient firstIngredient = mock(Ingredient.class);
     Ingredient secondIngredient = mock(Ingredient.class);
     Ingredient thirdIngredient = mock(Ingredient.class);
@@ -28,7 +29,7 @@ public class BurgerTest {
     @Test
     public void setBuns() {
         burger.setBuns(bun);
-        Assert.assertEquals(burger.bun, bun);
+        Assert.assertEquals(bun, burger.bun);
     }
 
     @Test
@@ -62,7 +63,7 @@ public class BurgerTest {
         Mockito.when(bun.getPrice()).thenReturn(5.5f);
         Mockito.when(firstIngredient.getPrice()).thenReturn(3.3f);
         Mockito.when(secondIngredient.getPrice()).thenReturn(16.7f);
-        Assert.assertEquals(31.0f, burger.getPrice(), 0);
+        Assert.assertEquals(31.0f, burger.getPrice(), DELTA);
     }
 
     @Test
